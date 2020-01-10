@@ -26,14 +26,14 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null: false, foreign_key: true|
 |email|string|null: false|
-|user_name|integer|null: false|
+|name|string|null: false|
 |password|integer|null: false|
 
 ### Association
-- has_many :group, through: :groups_users
-- has_many :comment
+- has_many :groups, through: :groups_users
+- has_many :comments
+- has_many :groups_users
 
 
 ## groups_usersテーブル
@@ -48,16 +48,14 @@ Things you may want to cover:
 
 
 ## groupテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|group|references|null: false, foreign_key: true|
-|group_name|integer|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 |member|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
-- has_many :comment
+- has_many :users
+- has_many :comments
 
 
 ## commentテーブル
@@ -65,8 +63,9 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |group|references|null: false, foreign_key: true|
-|comment|text|null: false, foreign_key: true|
-|image|string|foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|comment|text||
+|image|string||
 
 ### Association
 - belongs_to :user
