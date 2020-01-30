@@ -1,0 +1,60 @@
+.chat-side {
+  width: 300px;
+  height: auto;
+  background-color: #253141;
+  .user-name {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .user-name__top-items {
+      height: 20px;
+      width: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .user-name__top-items__name {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+      }
+      .user-name__top-items__icons {
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+        .icons {
+          color: white;
+        }
+        .user-name__top-items__icons-new-group {
+        margin-left: 5px;
+        }
+      }
+    }
+  }
+  .group-list {
+    height: calc(100vh - 100px);
+    width: 300px;
+    background-color: #2f3e51;
+    padding: 20px;
+    .group-list-box {
+      width: 260px;
+      margin-bottom: 40px;
+      .group {
+        color: white;
+        margin-bottom: 40px;
+        text-decoration: none;
+        height: 91px;
+      }
+        .group-list-box__group-name {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        .group-list-box__group-message {
+          font-size: 11px;
+        }
+    }
+    
+  }
