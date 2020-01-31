@@ -28,10 +28,10 @@
   .message-form
     .message-form__input-box
       .message-form__input-box__text
-        %input{:class => "text-era", :type => "text", :value => "type a message"}
+        %input{class: "text-era", type: "text", value: "type a message"}
       .message-form__input-box__image
         %label{class: "image-era", type:"file" }
           = icon('fas', 'image')
           %input{type: "file", class:"message-image"}
     .message-form__submit-btn
-    %input{:type => "submit", :value => "Send", :name =>"commit", :class=> "send-btn"}
+    %input{type: "submit", value: "Send", name: "commit", class: "send-btn"}

@@ -6,21 +6,20 @@
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
-    
-    .group-info__box {
+    &__box {
       margin-top: 35px;
       margin-left: 40px;
-      .group-info__box__group-name {
+      &__group-name {
         font-size: 20px;
         color: #333333;
         margin-bottom: 15px;
       }
-      .group-info__box__member {
+      &__member {
         font-size: 12px;
         color: #999999;
       }
     }
-    .group-info__edit-button {
+    &__edit-button {
       color: #38aef0;
       line-height: 40px;
       width: 72px;
@@ -38,22 +37,22 @@
     height: calc(100vh - 190px);
     background-color: #fafafa; 
     padding-left: 40px;
-    .message-list__box {
+    &__box {
       padding-top: 35px;
       padding-bottom: 11px;
-      .message-list__box-top {
+      &-top {
         margin-bottom: 12px;
         display: flex;
-        .message-list__box-top__name {
+        &__name {
           color: #333333;
           font-size: 16px;
         }
-        .message-list__box-top__date-stamp {
+        &__date-stamp {
           color: #999999;
           font-size: 12px;
         }
       }
-      .message-list__box__post {
+      &__post {
         color: #434A54;
         font-size: 14px;
       }
