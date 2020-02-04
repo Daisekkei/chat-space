@@ -1,0 +1,25 @@
+.chat-side
+  .user-name
+    .user-name__top-items
+      %p.user-name__top-items__name
+        ゆうたろう
+      %ul.user-name__top-items__icons
+        %li.user-name__top-items__icons-edit-user
+          = link_to "#" do
+            = icon('fas', 'user-edit', class: 'icons')
+        %li.user-name__top-items__icons-new-group
+          = link_to "#" do
+            = icon('fas', 'cog', class: 'icons')
+  .group-list
+    .group-list-box
+      = link_to "#", class:"group" do
+        %p.group-list__group-name
+          Test
+        %p.group-list__group-message
+          まだメッセージがありません
+    .group-list-box
+      = link_to "#", class:"group" do
+        %p.group-list__group-name
+          Test
+        %p.group-list__group-message
+          まだメッセージがありません
