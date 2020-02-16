@@ -24,6 +24,10 @@ Things you may want to cover:
 * ...
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 ## groups_usersテーブル
 
 |Column|Type|Options|
@@ -31,7 +35,10 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -39,7 +46,10 @@ Things you may want to cover:
 |name|string|null: false|
 |password|integer|null: false|
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ### Association
 - has_many :groups_users
 - has_many :groups, through: :groups_users
@@ -52,7 +62,10 @@ Things you may want to cover:
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -64,7 +77,10 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ### Association
 - has_many :groups_users
 - has_many :users, through: :groups_users
@@ -80,7 +96,13 @@ Things you may want to cover:
 |comment|text||
 |image|string||
 
+<<<<<<< Updated upstream
 
 ### Association
 - belongs_to :user
 - belongs_to :group
+=======
+### Association
+- belongs_to :user
+- belongs_to :group
+>>>>>>> Stashed changes
