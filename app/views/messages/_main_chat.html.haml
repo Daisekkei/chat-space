@@ -2,7 +2,7 @@
   .group-info
     .group-info__box
       .group-info__box__group-name
-        Test
+        = group.name
       .group-info__box__member
         Member : ゆうたろう
     .group-info__edit-button
@@ -12,26 +12,16 @@
     .message-list__box
       .message-list__box-top
         .message-list__box-top__name
-          ゆうたろう
-        .message-list__box-top__date-stamp
-          2020/01/22(Wed)22:00:00
-      .message-list__box__post
-        今日はようやく仕事が終わって学習してます
-    .message-list__box
-      .message-list__box-top
-        .message-list__box-top__name
-          ゆうたろう
-        .message-list__box-top__date-stamp
-          2020/01/22(Wed)22:00:00
-      .message-list__box__post
-        まだメッセージがありません
+          =render @messages
+    
   .message-form
     .message-form__input-box
       .message-form__input-box__text
-        %input{class: "text-era", type: "text", value: "type a message"}
-      .message-form__input-box__image
-        %label{class: "image-era", type:"file" }
-          = icon('fas', 'image')
-          %input{type: "file", class:"message-image"}
-    .message-form__submit-btn
-    %input{type: "submit", value: "Send", name: "commit", class: "send-btn"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          .message-form__input-box__image
+            = f.label :image, class: 'input-box__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'hidden'
+              = f.submit 'Send', class: 'form__submit-btn'
+          
