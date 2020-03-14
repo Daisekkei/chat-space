@@ -2,11 +2,12 @@
   .group-info
     .group-info__box
       .group-info__box__group-name
-        = group.name
+        = @group.name
       .group-info__box__member
-        Member : ゆうたろう
+        - @group.users. each do |user|
+          = user.name
     .group-info__edit-button
-      = link_to "#", class:"button-style" do 
+      = link_to edit_group_path(@group.id), class:"button-style" do
         Edit 
   .message-list
     .message-list__box
@@ -18,7 +19,7 @@
     .message-form__input-box
       .message-form__input-box__text
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.text_field :content, class: 'text-era', placeholder: 'type a message'
           .message-form__input-box__image
             = f.label :image, class: 'input-box__image' do
               = icon('fas', 'image', class: 'icon')
