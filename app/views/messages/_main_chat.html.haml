@@ -11,18 +11,15 @@
         Edit 
   .message-list
     .message-list__box
-      .message-list__box-top
-        .message-list__box-top__name
-          =render @messages
+      =render @messages
     
   .message-form
-    .message-form__input-box
-      .message-form__input-box__text
-        = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'text-era', placeholder: 'type a message'
+    .message-form__input-box 
+      = form_for [@group, @message] do |f|
+        .message-form__input-box__text
+          = f.text_field :content, class: 'message-form__message', placeholder: 'type a message'
           .message-form__input-box__image
-            = f.label :image, class: 'input-box__image' do
+            = f.label :image, class: 'message-form__mask' do
               = icon('fas', 'image', class: 'icon')
-              = f.file_field :image, class: 'hidden'
-              = f.submit 'Send', class: 'form__submit-btn'
-          
+              = f.file_field :image, class: 'message-form__mask__file'
+            = f.submit 'Send', class: 'message-form__send-btn'

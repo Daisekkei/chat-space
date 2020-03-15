@@ -39,70 +39,66 @@
     padding-left: 40px;
     &__box {
       padding-top: 35px;
-      padding-bottom: 11px;
-      &-top {
-        margin-bottom: 12px;
-        display: flex;
-        &__name {
-          color: #333333;
-          font-size: 16px;
-        }
-        &__date-stamp {
-          color: #999999;
-          font-size: 12px;
-        }
-      }
-      &__post {
-        color: #434A54;
-        font-size: 14px;
+      padding-bottom: 15px;
+      .message {
+        padding-bottom: 20px;
       }
     }
+  }
+  .upper-message {
+    &__user-name {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    }
+    &__date {
+      color: #999999;
+      font-size: 12px;
+    }
+  }
+  .lower-message {
+    color: #434A54;
+    font-size: 14px;
   }
   .message-form {
     height: 90px;
     padding: 20px 40px;
     background-color:#ddd;
-    display: flex;
-    justify-content: space-between;
     &__input-box {
       height: 50px;
-      width: calc(100vw - 485px);
+      // width: calc(100vw - 485px);
       padding: 0px 10px;
-      display: flex;
-      justify-content: space-between;
-      position: relative;
+      // justify-content: space-between;
       &__text {
-        color: #434a54;
-        background-color: white;
-        height: 50px;
-        width: 100%;
+        display: flex;
       }
-        .text-era {
-          height: 100%;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
-      &__image {
+    }
+    .new_message {
+      width: 100%;
+      position: relative;
+    }
+    .message-form__message {
+      color: #434a54;
+      background-color: white;
+      height: 50px;
+      width: 100%;
+    }
+      &__mask {
         position: absolute;
         top: 10px;
-        right: 20px;
+        right: 120px;
         font-size: 1.4rem;
-      }
-        .message-image {
-          display:none;
+        &__file {
+          display: none;
         }
-    }
-        
-  }
-    .send-btn {
+      }
+    &__send-btn {
       width: 100px;
       height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
       background-color: #38aef0;
       color: white;
       cursor: pointer;
     }
+  }
 }
+
