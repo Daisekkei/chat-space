@@ -15,7 +15,7 @@
       align-items: center;
       justify-content: space-between;
       &__name {
-        font-size: 16px;
+        font-size: 24px;
         color: white;
         font-weight: bold;
       }
@@ -41,20 +41,18 @@
     &-box {
       width: 260px;
       margin-bottom: 40px;
-      .group {
-        color: white;
-        margin-bottom: 40px;
-        text-decoration: none;
-        height: 91px;
-      }
-        &__group-name {
-          font-size: 20px;
-          margin-bottom: 5px;
-        }
-        &__group-message {
-          font-size: 11px;
-        }
     }
-    
+    .group {
+      color: white;
+      margin-bottom: 40px;
+      text-decoration: none;
+      &__name {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      &__message {
+          font-size: 11px;
+      }
+    }
   }
 }
