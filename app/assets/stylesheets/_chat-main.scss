@@ -37,14 +37,16 @@
     height: calc(100vh - 190px);
     background-color: #fafafa; 
     padding-left: 40px;
+    overflow: scroll;
     &__box {
       padding-top: 35px;
       padding-bottom: 15px;
-      .message {
-        padding-bottom: 20px;
-      }
     }
   }
+  .message {
+    padding-bottom: 20px;
+  }
+
   .upper-message {
     &__user-name {
     color: #333333;
@@ -59,6 +61,10 @@
   .lower-message {
     color: #434A54;
     font-size: 14px;
+    &__image {
+      height: 150px;
+      width: 200px;
+    }
   }
   .message-form {
     height: 90px;
@@ -86,7 +92,7 @@
       &__mask {
         position: absolute;
         top: 10px;
-        right: 120px;
+        right: 130px;
         font-size: 1.4rem;
         &__file {
           display: none;
@@ -98,6 +104,7 @@
       background-color: #38aef0;
       color: white;
       cursor: pointer;
+      margin-left: 15px;
     }
   }
 }
