@@ -41,11 +41,12 @@
     &__box {
       padding-top: 35px;
       padding-bottom: 15px;
-      .message {
-        padding-bottom: 20px;
-      }
     }
   }
+  .message {
+    padding-bottom: 20px;
+  }
+
   .upper-message {
     &__user-name {
     color: #333333;
