@@ -64,7 +64,7 @@ li {
     &:after {
       content: "";
       clear: both;
-      display: block;
+      display: flex;
     }
     &--left {
       float: left;
@@ -94,7 +94,6 @@ li {
     float: left;
   }
   &__btn {
-    float: right;
     display: inline-block;
     cursor: pointer;
     &--add {
