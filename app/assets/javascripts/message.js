@@ -40,7 +40,7 @@ $(function(){
      return html;
    };
 }
-})
+
 
 $('#new_message').on('submit', function(e){
  e.preventDefault();
@@ -67,3 +67,5 @@ $('#new_message').on('submit', function(e){
   $('.message-form__send-btn').prop('disabled', false);
   })
 })
+})
+
