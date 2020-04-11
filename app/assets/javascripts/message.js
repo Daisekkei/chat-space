@@ -67,6 +67,7 @@ $('#new_message').on('submit', function(e){
   $('.message-form__send-btn').prop('disabled', false);
   })
 })
+})
 
 var reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -98,5 +99,4 @@ var reloadMessages = function() {
   });
 };
  setInterval(reloadMessages, 7000);
-});
 
